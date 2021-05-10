@@ -1,0 +1,32 @@
+{
+	"https_domain_url": "https://example.org" ,
+	"upload_destination": "/mnt/blockstorage/PUBLIC/IMAGE_BUCKET" ,
+	"image_bucket_url": "https://example.org/IMAGE_BUCKET/" ,
+	"express": {
+		"port": 1331
+	} ,
+	"users": [
+		{ "username": "asdfasdfasdfasdfasdfasdf" , "password": "asdfasdfasdfasdfasdfasdf" }
+	] ,
+	"cookie_secret": "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfafsdf" ,
+	"jwt_secret": "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfafsdf" ,
+	"jwt_algorithm": "ES512" ,
+	"jwt_cookie_options": {
+		"maxAge": 900000 ,
+		"httpOnly": true ,
+		"signed": true
+	} ,
+	"rate_limiter_flexible": {
+		"redis": {
+			"host": "127.0.0.1" ,
+			"port": 6464 ,
+			"db_number": 3 ,
+			"password": "asdfasdfasdfasdfasdfasdfsadfsadfsdfasdf"
+		} ,
+		"rate": {
+			"requests": 10 ,
+			"per_number_of_seconds": 1
+		} ,
+		"block_message": "Why"
+	}
+}
